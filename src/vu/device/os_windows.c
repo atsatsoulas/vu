@@ -57,6 +57,11 @@ LRESULT CALLBACK gs_wnd_proc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
         }
         case WM_SYSCOMMAND:
         {
+            if ( (wParam & 0xfff0)  == SC_RESTORE )
+            {
+                gs_write_urge(GS_WindowResized, 0, 0);
+                break;
+            }
             if ( (wParam & 0xfff0)  == SC_KEYMENU )
             {
                 return 0;
@@ -110,7 +115,6 @@ LRESULT CALLBACK gs_wnd_proc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 
         case WM_SIZE:
 		{
-			// TODO detect when window is restored from maximized.
 			if (wParam == SIZE_MAXIMIZED) 
 			{
 		    	gs_write_urge(GS_WindowResized, 0, 0);  
