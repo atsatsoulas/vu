@@ -1,14 +1,14 @@
 // Copyright © 2013 Galvanized Logic Inc.
 // Use is governed by a FreeBSD license found in the LICENSE file.
 
-#include "os_darwin.m"
+#include "os_darwin.h"
 #import <stdio.h>
 #import <OpenGL/gl3.h> // Needed for the OpenGL gl* functions.
 
 // An native test application can be built using:
 //     clang -framework Cocoa -framework OpenGL -o App os_darwin_test.m
 // This gives an idea of the expected usage exposed gs_* functions.
-int main(int argc, char *argv[]) {
+int main2(int argc, char *argv[]) {
     long display = gs_display_init();
     gs_set_attr_s(GS_AppName, "Gsh");
     gs_set_attr_l(GS_ShellX, 600);

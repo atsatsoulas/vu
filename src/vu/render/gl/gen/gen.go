@@ -607,8 +607,8 @@ var typemap = map[string][]string{
 	"constGLchar*const*": []string{"const char* const*", "[]string", strArray},
 
 	// The following may not be in every spec.
-	"struct_cl_context*": []string{"struct _cl_context*", "*clContext", "(*C.struct_cl_context)"},
-	"struct_cl_event*":   []string{"struct _cl_event*", "*clEvent", "(*C.struct_cl_event)"},
+	"struct_cl_context*": []string{"struct _cl_context*", "*clContext", "(*C.struct__cl_context)"},
+	"struct_cl_event*":   []string{"struct _cl_event*", "*clEvent", "(*C.struct__cl_event)"},
 	"GLDEBUGPROCARB":     []string{"GLDEBUGPROCARB", "DEBUGPROCARB", "C.GLDEBUGPROCARB"},
 	"GLDEBUGPROC":        []string{"GLDEBUGPROC", "DEBUGPROC", "C.GLDEBUGPROC"},
 }

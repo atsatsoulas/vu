@@ -13,7 +13,7 @@ package device
 // #cgo darwin LDFLAGS: -framework Cocoa -framework OpenGL -framework IOKit
 //
 // #include <stdlib.h>
-// #include "os_darwin.m"
+// #include "os_darwin.h"
 import "C" // must be located here.
 
 import (

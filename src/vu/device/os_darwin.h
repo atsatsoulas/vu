@@ -1,3 +1,5 @@
+#ifndef os_darwin_h
+#define os_darwin_h
 // Copyright © 2013 Galvanized Logic Inc.
 // Use is governed by a FreeBSD license found in the LICENSE file.
 
@@ -122,3 +124,4 @@ enum {
    GS_CommandKeyMask    = 1 << 20,  // NSCommandKeyMask
    GS_FunctionKeyMask   = 1 << 23,  // NSFunctionKeyMask
 };
+#endif

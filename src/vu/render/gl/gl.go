@@ -4158,7 +4158,7 @@ func GetUniformLocation(program uint32, name string) int32 {
 	return int32(C.wrap_glGetUniformLocation(C.uint(program), cstr1))
 }
 func CreateSyncFromCLeventARB(context *clContext, event *clEvent, flags uint32) Sync {
-	return Sync(C.wrap_glCreateSyncFromCLeventARB((*C.struct_cl_context)(context), (*C.struct_cl_event)(event), C.uint(flags)))
+	return Sync(C.wrap_glCreateSyncFromCLeventARB((*C.struct__cl_context)(context), (*C.struct__cl_event)(event), C.uint(flags)))
 }
 func FenceSync(condition uint32, flags uint32) Sync {
 	return Sync(C.wrap_glFenceSync(C.uint(condition), C.uint(flags)))
